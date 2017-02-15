@@ -1,8 +1,4 @@
-<div class="panel panel-default">
-  <div class="panel-body">
-    <div class="row">
-      <div class="col-md-4">
-
+<div class="divider">
 
 <h1>Hello, <%= current_user.name%></h1>
 <%if RajivRanjan.find_by_voter(session[:user_id])==nil && NeilTyagi.find_by_voter(session[:user_id])==nil%>
@@ -17,7 +13,4 @@
 <h3>You Have Already Voted See <a href="/result">Results</a></h3>
 <%end%>
 
-</div>
-</div>
-</div>
 </div>

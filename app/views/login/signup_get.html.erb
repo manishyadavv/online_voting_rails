@@ -1,8 +1,110 @@
+
+<div class="divider">
+<h1> ONLINE VOTING SYSTEM </h1>
 <h1>Hello Welcome to signup page</h1>
 
+<header>
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/GGSIU_logo.svg/1164px-GGSIU_logo.svg.png" alt="HTML5 Icon" width="100" height="100" align="middle">
+
+
+
+</header>
+
 <%= form_tag '/signup' do %>
-enrollment<%= text_field_tag :enrollment%><br><br>
-name  <%= text_field_tag :name%><br><br>
-password<%= password_field_tag :password%><br><br>
-<%= submit_tag "signup"%>
+
+<h2>Enrollment  <%= text_field_tag :enrollment %><br><br></h2>
+<h2>Name<%= text_field_tag :name%><br><br></h2>
+<h2>Password<%= password_field_tag :password%><br><br></h2>
+<h3><%= submit_tag "signup"%></h3>
 <%end%>
+<div class="divider">
+<title>Online Voting System</title>
+</head>
+
+<body>
+
+
+	<%= yield %>
+
+
+  </div>
+	<style >
+	.divider{background-image: url("https://d13yacurqjgara.cloudfront.net/users/31664/screenshots/1666535/espn-college-football-playoffs-2.gif");
+	background-size: 75%;
+	border: lightgrey solid 1px;
+	border-radius:10px;
+ text-align: center;
+
+	}
+		background-color: #F0FFFF;
+		border: lightgrey solid 1px;
+		border-radius:15px;
+ text-align: center;
+
+
+		input[type=text] {
+     width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid purple;
+ text-align: center;
+ line-height: 1.8;
+ position: static;
+}
+input[type=submit] {
+    width: 30%;
+    background-color: #55ACEE;
+    color: white;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+		 text-align: center;
+		 line-height: 1.8;
+		 position: static;
+}
+
+h1 {
+    font-size: 50px;
+    display: center;
+    background-color: purple;
+    color: pink;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 20px;
+    display: center;
+    /*background-color: pink ;*/
+    color: purple;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5em;
+    padding: 8px 20px;
+}
+
+
+h3 {
+    font-size: 10px;
+    display: center;
+    /*background-color: purple;*/
+    color: pink;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+}
+
+
+	</style>
+
+<!-- <footer>
+	<h1> Copyright </h1>
+</footer> -->
+
+</body>
+</div>
+</html>
