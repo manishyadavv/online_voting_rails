@@ -1,3 +1,4 @@
+
 <h1>Hello, <%= current_user.name%></h1>
 <%if RajivRanjan.find_by_voter(session[:user_id])==nil && NeilTyagi.find_by_voter(session[:user_id])==nil%>
 <h3>Cr Candidates</h3>
@@ -11,4 +12,6 @@
 <h3>You Have Already Voted See <a href="/result">Results</a></h3>
 <%end%>
 
+<%if (RajivRanjan.find_by_voter(session[:user_id]) ==nil && NeilTyagi.find_by_voter(session[:user_id]))||(RajivRanjan.find_by_voter(session[:user_id]) && NeilTyagi.find_by_voter(session[:user_id])==nil)%>
 <h4>TO see who all are voted <a href="/see">click here</a></h4>
+<%end%>
