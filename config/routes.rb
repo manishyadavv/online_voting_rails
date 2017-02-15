@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   get '/result'=>'home#result'
   get '/change'=>'login#change_get'
   post '/change'=>'login#change'
-
+  get '/see'=>'home#see'
 end
