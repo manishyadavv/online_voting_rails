@@ -1,16 +1,24 @@
+<h1>Results are:</h1>
+
+
 <%if RajivRanjan.all().first%>
-	<h1>Rajiv votes are ,<%= RajivRanjan.all().count%></h1>
+	<h3>Rajiv : <%= RajivRanjan.all().count%> vote</h3>
 	<%else%>
-	<h1>Rajiv votes are , 0</h1>
+	<h3>Rajiv : 0</h3>
 
 <%end%>
 
 <%if NeilTyagi.all().first%>
-	<h1>Neil votes are , <%= NeilTyagi.all().count%></h1>
+	<h3>Neil  :  <%= NeilTyagi.all().count%> vote</h3>
 	<%else%>
-	<h1>Neil votes are , 0</h1>
+	<h3>Neil :  0 votes</h3>
 
 <%end%>
 
+<%if RajivRanjan.all().count>NeilTyagi.all().count%>
+<h4>Rajiv Leads By <%= RajivRanjan.all().count-NeilTyagi.all().count%></h4>
+<%else%>
+<h4>Neil Leads By <%= NeilTyagi.all().count-RajivRanjan.all().count%></h4>
+<%end%>
 <a href="/">click here to go back</a>
 
