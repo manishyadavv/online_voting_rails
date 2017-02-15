@@ -1,0 +1,21 @@
+<h3>Voter List</h3>
+<%self_neil=40816403215%>
+<%self_rajiv=70116403215%>
+<%neil=NeilTyagi.where(:self=>self_neil)%>
+<%rajiv=RajivRanjan.where(:self=>self_rajiv)%>
+
+<ol>
+<%if neil.first%>
+   <%neil.each do |neil|%>
+   <li><%= User1.find_by_id(neil.voter).name%></li>
+   <%end%>	
+<%end%>
+
+<%if rajiv.first%>
+<%rajiv.each do |rajiv|%>
+    <li><%= User1.find_by_id(rajiv.voter).name%></li>
+    <%end%>
+<%end%>	
+</ol>
+
+<h4><a href="/">click here</a> to go back</h4>
