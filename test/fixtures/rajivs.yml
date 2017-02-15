@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  voter: 1
+  self: 1
+
+two:
+  voter: 1
+  self: 1

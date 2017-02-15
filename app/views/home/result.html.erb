@@ -1,0 +1,16 @@
+<%if RajivRanjan.all().first%>
+	<h1>Rajiv votes are ,<%= RajivRanjan.all().count%></h1>
+	<%else%>
+	<h1>Rajiv votes are , 0</h1>
+
+<%end%>
+
+<%if NeilTyagi.all().first%>
+	<h1>Neil votes are , <%= NeilTyagi.all().count%></h1>
+	<%else%>
+	<h1>Neil votes are , 0</h1>
+
+<%end%>
+
+<a href="/">click here to go back</a>
+
