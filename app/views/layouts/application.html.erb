@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>Voting</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if current_user%>
 
-<% if session[:user_id]%>
 <header>
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/GGSIU_logo.svg/1164px-GGSIU_logo.svg.png" alt="HTML5 Icon" width="100" height="100">
-	<h1> ONLINE VOTING SYSTEM </h1>
-
-
+	<h1>Online Voting</h1>
+	<%= link_to 'logout', destroy_user_session_path, method: :delete %>
 </header>
-<a href="/logout">logout</a><br>
-<a href="/change">change password</a>
 
 <%end%>
-
+<div class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#responsive-navbar-example" aria-expanded="false">
+				<span class="sr-only"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">
+				ONLINE VOTING SYSTEM
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="responsive-navbar-example">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Team</a></li>
+				<li><a href="#">Work</a></li>
+			</ul>
+		</div>
+	</div>
 <%= yield %>
+</div>
+
+
 
 </body>
 </html>
