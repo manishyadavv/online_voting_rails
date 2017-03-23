@@ -20,14 +20,19 @@ ActiveRecord::Schema.define(version: 20170214193520) do
     t.datetime "updated_at", null: false
   end
 
-  
+  create_table "neils", force: :cascade do |t|
+    t.integer  "voter"
+    t.integer  "self"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "rajiv_ranjans", force: :cascade do |t|
     t.string   "voter"
     t.string   "self"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
 
   create_table "user1s", force: :cascade do |t|
     t.string   "enrollment"
@@ -37,5 +42,4 @@ ActiveRecord::Schema.define(version: 20170214193520) do
     t.datetime "updated_at", null: false
   end
 
- 
 end
